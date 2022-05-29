@@ -1,11 +1,11 @@
-FROM node:16-alpine3.140
+FROM node:16-alpine
 
 WORKDIR /app
+
 COPY . .
 
-RUN npm i 
-EXPOSE 3000
+RUN npm install
 
+EXPOSE 8065
 
-
-CMD [ "node","index.js" ]
+ENTRYPOINT ["node", "index.js"]
